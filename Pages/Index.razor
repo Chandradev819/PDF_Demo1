@@ -9,7 +9,8 @@
     {
         if (firstRender)
         {
-            await JSRuntime.InvokeAsync<object>("webviewerFunctions.initWebViewer");
+            string path = "https://pdftron.s3.amazonaws.com/downloads/pl/demo-annotated.pdf";
+            await JSRuntime.InvokeAsync<object>("webviewerFunctions.initWebViewer", path);
         }
     }
 }
